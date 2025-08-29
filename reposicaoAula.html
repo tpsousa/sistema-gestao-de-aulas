@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solicitar Reposição de Aula</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #0f0f0f, #1a1a1a);
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #e5e7eb;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 450px;
+      padding: 30px;
+      border: 1px solid #3f3f46;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+      background: #111;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #f3f4f6;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      color: #d1d5db;
+      margin-bottom: 5px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #3f3f46;
+      border-radius: 8px;
+      background: #1f1f1f;
+      color: #f3f4f6;
+      margin-bottom: 15px;
+      font-size: 14px;
+      outline: none;
+      transition: 0.3s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #9ca3af;
+      box-shadow: 0 0 6px #6b7280;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #1f2937, #374151);
+      color: #fff;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    button:hover {
+      background: linear-gradient(135deg, #374151, #4b5563);
+      transform: scale(1.03);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Solicitar Reposição</h1>
+    <form id="reposicaoForm">
+      <label for="conteudo">Conteúdo da Aula</label>
+      <input type="text" id="conteudo" name="conteudo" placeholder="Ex: Estruturas de Dados" required>
+
+      <label for="motivo">Motivo da Reposição</label>
+      <textarea id="motivo" name="motivo" rows="3" placeholder="Descreva o motivo da reposição" required></textarea>
+
+      <label for="professor">Professor (opcional)</label>
+      <input type="text" id="professor" name="professor" placeholder="Nome do professor">
+
+      <label for="data">Data Sugerida</label>
+      <input type="date" id="data" name="data" required>
+
+      <button type="submit">Enviar Solicitação</button>
+    </form>
+  </div>
+
+  <script>
+    const form = document.getElementById("reposicaoForm");
+    form.addEventListener("submit", function(e) {
+      e.preventDefault();
+      const conteudo = document.getElementById("conteudo").value;
+      const motivo = document.getElementById("motivo").value;
+      const professor = document.getElementById("professor").value || "Não informado";
+      const data = document.getElementById("data").value;
+
+      alert(`Solicitação enviada!\n\nConteúdo: ${conteudo}\nMotivo: ${motivo}\nProfessor: ${professor}\nData: ${data}`);
+      form.reset();
+    });
+  </script>
+</body>
+</html>
