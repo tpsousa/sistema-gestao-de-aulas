@@ -107,6 +107,7 @@
   </style>
 </head>
 <body>
+
   <div class="container">
     <div class="logo">
       <img src="sources/images/imagem-empresa.jpeg" alt="Logo Empresa">
@@ -133,6 +134,7 @@
 
       if(email === "admin@empresa.com" && senha === "12345") {
         alert("Login realizado com sucesso!");
+        window.location.href = "dashboard.html";
       } else {
         alert("E-mail ou senha incorretos!");
       }

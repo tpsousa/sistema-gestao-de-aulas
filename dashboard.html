@@ -147,14 +147,17 @@
 
   <script>
     function solicitarReposicao() {
-      const data = prompt("Informe a data da aula que deseja repor (dd/mm/aaaa):");
-      const modulo = prompt("Informe o módulo ou assunto da aula:");
-      if (data && modulo) {
+     // const data = prompt("Informe a data da aula que deseja repor (dd/mm/aaaa):");
+      //const modulo = prompt("Informe o módulo ou assunto da aula:");
+      window.location.href = "reposicaoAula.html";
+
+      /*if (data && modulo) {
         alert(`Solicitação enviada! Data: ${data} | Módulo: ${modulo}`);
       } else {
         alert("Preencha todos os campos para solicitar a reposição.");
-      }
+      }*/
     }
-  </script>
+
+ </script>
 </body>
 </html>
