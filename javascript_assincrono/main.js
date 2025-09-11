@@ -141,3 +141,26 @@ minhaPromise
 
 //pesquisa --- protocolo http/https : oque e,como funciona,etc
 //data limite; 04/09/2025
+
+function soma (a,b) {
+
+  const promise = new Promise((req,res)=>{
+    try {
+        const requisicao = await fetch('https:apiqualquer.github');
+
+        return requisicao;
+
+        console.log("que a soma ela foi realizada com sucesso");
+        res.status(202).json("a soma foi realizada com sucesso");
+
+    }catch(err){
+       console.log("nao foi possivel realizar a soma");
+       res.status(404).json("nao possivel realizar a soma")
+    }
+  })
+}
+
+//oque e protocolo http/https?
+//quais os principais tipos de requisicao
+//quais os principais tipos de status
+//etc
