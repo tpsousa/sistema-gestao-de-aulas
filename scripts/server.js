@@ -25,7 +25,7 @@ app.post('/login' ,(req,res)=>{
     const usuario = usuarios.find(
         u=> u.email === email && u.senha === senha
     );
-
+    
     if (usuario) {
         return res.json({sucesso : true , mensagem : 'login realizado com sucesso'});
     }else { 

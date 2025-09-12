@@ -16,7 +16,6 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #e5e7eb;
     }
-
     .container {
       width: 100%;
       max-width: 450px;
@@ -26,21 +25,18 @@
       box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
       background: #111;
     }
-
     h1 {
       text-align: center;
       margin-bottom: 25px;
       color: #f3f4f6;
     }
-
     label {
       display: block;
       font-size: 14px;
       color: #d1d5db;
       margin-bottom: 5px;
     }
-
-    input, select, textarea {
+    input, textarea {
       width: 100%;
       padding: 10px;
       border: 1px solid #3f3f46;
@@ -52,12 +48,10 @@
       outline: none;
       transition: 0.3s;
     }
-
-    input:focus, select:focus, textarea:focus {
+    input:focus, textarea:focus {
       border-color: #9ca3af;
       box-shadow: 0 0 6px #6b7280;
     }
-
     button {
       width: 100%;
       padding: 12px;
@@ -69,7 +63,6 @@
       cursor: pointer;
       transition: background 0.3s, transform 0.2s;
     }
-
     button:hover {
       background: linear-gradient(135deg, #374151, #4b5563);
       transform: scale(1.03);
@@ -114,7 +107,6 @@
       });
 
       if (resposta.ok) {
-        // redireciona para a página de sucesso que o servidor devolve
         window.location.href = "/sucesso.html";
       } else {
         alert("Erro ao enviar solicitação");
@@ -123,10 +115,7 @@
       console.error("Erro na requisição:", err);
       alert("Não foi possível enviar a solicitação.");
     }
-
-    form.reset();
   });
-</script>
-
+  </script>
 </body>
 </html>
