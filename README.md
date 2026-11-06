@@ -72,11 +72,11 @@ Depois de iniciar, acesse `http://localhost:3000` `[confirmar a porta]`.
 - [x] Página de login
 - [x] Autenticação no back-end
 - [x] Lógica de reposição de aulas
-- [ ] CRUD de aulas
-- [ ] Painel do usuário
-- [ ] Persistência em banco de dados
-- [ ] Testes automatizados
-- [ ] Deploy
+- [x] CRUD de aulas
+- [x] Painel do usuário
+- [x] Persistência em banco de dados
+- [x] Testes automatizados
+- [x] Deploy
 
 ## Boas práticas e próximos passos técnicos
 
